@@ -1,0 +1,25 @@
+.btn-link{
+    @include styleBtn-Link($cl-white, $pd-5, $pd-20, $cl-none, $bd-1, $cl-white);
+    border-radius: $bd-1 + 2;
+    &:hover{
+        @include styleBtn-Link($cl-white, $pd-5, $pd-20, $cl-green-0, $bd-1, $cl-green-0);
+    }
+}
+
+.button{
+    @include styleBtn-Link($cl-white, $pd-12, $pd-24, $cl-green-0, $bd-1, $cl-none);
+    border-radius: 0 $bd-4 $bd-4 0;
+    font-weight: 600;
+    &:hover{
+        background-color: $cl-green-1;
+    }
+}
+
+.button2{
+    @include styleBtn-Link($cl-white, $pd-12, $pd-24, $cl-green-0, $bd-1, $cl-none);
+    border-radius: $bd-4;
+    font-weight: 600;
+    &:hover{
+        background-color: $cl-green-1;
+    }
+}

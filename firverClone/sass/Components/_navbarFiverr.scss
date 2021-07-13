@@ -1,0 +1,28 @@
+.navbarFiverr{
+    ul{
+    list-style: none;
+    li{
+        
+            i{
+                width: 25px;
+                height: 25px;
+                border: 2px solid $cl-gray-3;
+                border-radius: 50%;
+                background-color: $cl-none;
+                text-align: center;
+                line-height: 21px;
+                font-size: $fs-16 - 4;
+                color: $cl-gray-3;
+            }
+            span{
+                margin-left: $mg-20 - 10;
+                @include styleText($cl-dark-0, $fs-16 + 2, $fw-700);
+            }                
+            p{            
+            margin-top: $mg-20 - 10;
+            font-size: $fs-16 + 2;
+            line-height: 26px;
+            }
+    }
+    }
+}

@@ -1,0 +1,44 @@
+.review{
+    // padding-bottom: $pd-96;
+    
+    .review__carousel{
+        .row{
+            .review__info{
+                padding-right: $pd-44;
+                .review__info__name{
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: $pd-20 - 4;
+                    h5{
+                        font-size: $fs-16 + 4;
+                    }
+                    
+                    .review__logo{
+                        margin-left: $mg-20 - 4;
+                        padding-left: $pd-20 - 4;
+                        border-left: 1px solid $cl-gray-4;  
+                        font-size: 20px;
+                        line-height: 20px; 
+                        height: 20px;  
+                        margin-bottom: $mg-5 + 3;                   
+                    }
+                    img{
+                        display: inline-block;
+                        margin-bottom: $mg-5 + 3;
+                        height: 36px;
+                        width: 154px;
+                        
+                    }
+                }
+                .review__info__text{
+                    i{
+                        font-family: "Macan";
+                        @include styleText($cl-green-2, $fs-40 - 5, $fw-500);
+                        line-height: 44px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

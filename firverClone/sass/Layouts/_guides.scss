@@ -1,0 +1,74 @@
+.guides{
+    // height: 970px;
+    background-color: $cl-white;
+    padding-top: $pd-96;
+    padding-bottom: $pd-96;
+    .container-fluid{
+        .row{
+            padding-left: 0;
+            padding-bottom: $pd-16;
+        }
+        .guides__title{
+            padding-left: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: $cl-blue-4;
+                font-size: $fs-16 + 4!important;
+                text-align: right !important;
+                font-weight: $fw-500;
+                margin-left: 15%; 
+            }
+        }
+        .guides__cover{
+            margin-left: 5px;
+            height: 438px;
+            width: 100%;
+            background-image: url("../images/bg-signup-1400-x1.png");
+            @extend %styleBackground;
+            position: relative;
+            .guides__cover__content{
+                position: absolute;
+                top: 50%;
+                left: 8%;
+                transform: translateY(-50%);
+                margin-right: 20%;
+                h1{
+                    padding-bottom: 20px;
+                }
+            }
+        }
+        @include responsive("large"){
+            .guides__cover{
+                height: 380px;
+                background-image: none;
+                background-color: $cl-red;
+            }
+        }
+        @media screen and (max-width: 719px){
+            .row{
+                flex-wrap: wrap;
+                .cardGuides{
+                    height: 390px;
+                    margin-top: 20px;
+                    
+                }
+            }
+        }
+        @media screen and (max-width: 550px){
+            .guides__cover{
+                .guides__cover__content{
+                    h1{
+                        font-size: 38px;
+                        line-height: 1.2;
+                        span{
+                            font-size: 38px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

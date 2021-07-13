@@ -1,0 +1,92 @@
+.business{
+    // height: 690px;
+    background-color: $cl-blue-2;
+    color: white;
+    padding-bottom: $pd-96;
+    margin-bottom: $pd-96;
+    .container-fluid{
+        padding-right: $pd-12 - 10;
+        .row{
+            flex-wrap: unset;
+            padding-top: $pd-96;
+            .business__text{
+                flex-grow: 5;
+                padding-right: $pd-44 -2;
+                .business__icon{
+                    // display: flex;
+                    align-items: center;
+                    padding-bottom: $pd-26 + 6;
+                    small{
+                        margin: auto 0;
+                        i{
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+                        span{
+                            display: inline-block;
+                            margin-left: $mg-20 - 5;
+                            line-height: 10px;
+                            @include styleText($cl-white, $fs-16 - 6, $fw-600);
+                            padding: 3px 7px 2px;
+                            border: 1px solid $cl-none;
+                            background-color: $cl-blue-3;
+                            border-radius: 999px;
+                        }
+                    }
+    
+                }
+                h3{
+                    color: $cl-white;
+                    padding-bottom: $pd-24;
+                    i{
+                        font-family: "Macan";
+                    }
+                }
+                p{
+                    font-size: $fs-16 + 2;
+                }
+                ul{
+                    li{
+                        margin-top: $mg-20 - 10;
+                        span{
+                            color: $cl-white;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                button{
+                    margin-top: $pd-44;
+                    padding: $pd-12 $pd-24;
+                }
+            }
+            .business__img{
+                display: flex;
+                align-items: center;
+                flex-grow: 7;
+                margin: 0 auto;
+                padding-right: 0;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+    @include responsive("large"){
+        .container-fluid{
+            .row{
+                flex-wrap: wrap; 
+                .business__text{
+                    .button2{
+                        margin-bottom: $mg-20;
+                    }
+                }
+                .business__img{
+                    display: block;
+                  
+                }
+            }
+        }
+    }
+
+}

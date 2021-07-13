@@ -1,0 +1,34 @@
+.owl-carousel{
+    .owl-nav{
+        button{
+            &.owl-prev, &.owl-next{
+                color: internal-light-dark(black, white);
+                background-color: $cl-white;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                line-height: 50px;
+                box-shadow: 0 2px 5px 0 $cl-black-0;
+                font-size: $fs-40;
+                position: absolute;
+                top: 45%;
+                &:hover{
+                    color: $cl-dark-0;
+                    border:  $cl-blue-0;
+                    background-color: $cl-white;
+                    box-shadow: 0 0px 5px 3px $cl-blue-0;
+                }
+            }
+            &.owl-prev{
+                left: -30px;
+            }
+            &.owl-next{
+                right: -30px;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        
+    }
+}

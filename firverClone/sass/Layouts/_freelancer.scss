@@ -1,0 +1,44 @@
+.freelancer{
+    padding-top: $pd-96;
+    // height: 600px;
+    background-color: $cl-gray-1;
+    padding-bottom: $mg-20 + 20;
+    .container-fluid{
+        .freelancer__top, .freelancer__bot{
+            text-decoration: none;
+            color: $cl-blue-4;
+            font-size: $fs-16 + 4!important;
+            text-align: right !important;
+            font-weight: $fw-500;
+            padding-bottom: $pd-24;
+            margin-bottom: $mg-5 + 3; 
+        }
+  
+        .row{
+            justify-content: space-between;
+            align-items: center;
+            h3{
+            }
+            a{
+               
+            }
+        }
+        .freelancer__bot{
+            display: none;
+        }
+    }
+    @include responsive("large"){
+        .container-fluid{
+            .row{
+                .freelancer__top{
+                    display: none;
+                }
+            }
+            .freelancer__bot{
+                display: block;
+                text-align: left !important;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.fingertips{
+    padding-top: $pd-96;
+    padding-bottom: $pd-96;
+    background-color: $cl-blue-1;
+    margin-top: $mg-40;
+    word-spacing: 1px;
+    .row{        
+        justify-content: center;
+        align-items: center;
+        .fingertips__info{
+            padding-right: $pd-26 + 39;
+            ul{
+            list-style: none;
+            li{
+                
+                    i{
+                        width: 25px;
+                        height: 25px;
+                        border: 2px solid $cl-gray-3;
+                        border-radius: 50%;
+                        background-color: $cl-none;
+                        text-align: center;
+                        line-height: 21px;
+                        font-size: $fs-16 - 4;
+                        color: $cl-gray-3;
+                    }
+                    span{
+                        margin-left: $mg-20 - 10;
+                        @include styleText($cl-dark-0, $fs-16 + 2, $fw-700);
+                    }                
+                 p{
+                    
+                    margin-top: $mg-20 - 10;
+                    font-size: $fs-16 + 2;
+                    line-height: 26px;
+                    }
+                }
+            }
+
+        }
+        .fingertips__video{        
+            width: 100%;
+            // max-height: 390px;
+            position: relative;
+            margin: 0 auto;
+            // padding-bottom: 40px;
+            .picture--video{                
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+                &::after{
+                    content: "";
+                    background: url("../images/desktop-play-button.c1196d6.png") no-repeat;
+                    background-size: 80px;
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        } 
+    }
+    @media screen and (min-width: 990px) {
+        .row{
+            flex-wrap: unset;
+            .fingertips__info{
+                flex-grow: 4;
+            }
+            .fingertips__video{
+                flex-grow: 6;
+            }
+        }
+    }
+    @media screen and (max-width: 989px) {
+        .row{
+            
+            .fingertips__info{
+                ul{
+                    li{
+                        span{
+                            font-size: $fs-16 + 2;
+                        }
+                        p{
+                            font-size: $fs-16 + 2;
+                        }
+                    }
+                }
+            }
+            .fingertips__video{
+                display: block;
+            }
+        }
+    }
+
+}

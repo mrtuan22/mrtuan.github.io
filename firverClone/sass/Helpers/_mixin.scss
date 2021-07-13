@@ -1,0 +1,29 @@
+@mixin styleText($cl, $fs, $fw){
+    color: $cl;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin  styleBtn-Link($cl, $pd-y, $pd-x, $bg-color, $bd, $bd-color) {
+    color: $cl;
+    padding: $pd-y $pd-x;
+    background-color: $bg-color;
+    border: $bd solid $bd-color;
+}
+
+@mixin styleInput-Search(){
+
+}
+
+@mixin responsive($screen){
+    @if map-has-key($map: $break-points, $key: $screen) { //Hàm kiểm tra người dùng nhập vào có tồn tại hay không
+        //kiểm tra screen có trong break-point hay không
+        $value: map-get($map: $break-points, $key: $screen); //lấy kích thước màn hình
+        @media screen and (max-width:$value){
+            @content;     //code css sẽ được thêm vào đây
+        }
+    }
+    @else{
+        @warn "`{$screen}` isn't exist in break-points";//`{$screen}` truyền biến screen
+    }
+}
